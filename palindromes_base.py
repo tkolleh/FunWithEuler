@@ -2,7 +2,7 @@ import math
 
 
 def answer(n):
-    if n < 0 or n > 1000: raise Exception("Parameter out of bounds")
+    if (n < 0 or n > 1000): raise Exception("Parameter out of bounds")
     b_number = int(str(bin(n))[2:])
     base = 0
     palindrome = False

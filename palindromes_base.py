@@ -6,6 +6,10 @@ def answer(n):
         raise Exception("Parameter out of bounds")
 
     b_number = int(str(bin(n))[2:])
+
+    if len(list(str(b_number))) % 2 != 0:
+        print('\nnumber {} has an odd binary {}'.format(n, b_number))
+
     base = 1
     palindrome = False
     while not palindrome:
@@ -29,14 +33,14 @@ def is_palindrome(number, base):
 
     return (forward == rev)
 
-num = 0
-while num < 1002:
-    print('Palindrome base for '+str(num)+' is '+str(answer(num)))
-    num += 1
+# num = 0
+# while num < 1002:
+#     print('Palindrome base for '+str(num)+' is '+str(answer(num)))
+#     num += 1
 
-# print('Palindrome for 0 is '+str(answer(0)))
-# print('Palindrome for 3 is '+str(answer(3)))
-# print('Palindrome for 42 is '+str(answer(42)))
-# print('Palindrome for 97 is '+str(answer(97)))
-# print('Palindrome for 999 is '+str(answer(999)))
+print('Palindrome for 0 is '+str(answer(0)))
+print('Palindrome for 3 is '+str(answer(3)))
+print('Palindrome for 42 is '+str(answer(42)))
+print('Palindrome for 97 is '+str(answer(97)))
+print('Palindrome for 999 is '+str(answer(999)))
 #print('Palindrome for 1097 is '+str(answer(1097)))
